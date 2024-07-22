@@ -24,4 +24,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("myhome/", views.home),
     path("contact/", views.contact),
+    path("darkmode/", views.darkmode),
+    path("registration/", views.registration),
 ]

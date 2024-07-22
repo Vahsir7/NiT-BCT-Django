@@ -6,4 +6,10 @@ def home(request):
 
 def contact(request):
     return render(request, "contactpage.html")
+
+def darkmode(request):
+    return render(request, "darkmode.html")
 # Create your views here.
+
+def registration(request):
+    return render(request, "registration.html")
