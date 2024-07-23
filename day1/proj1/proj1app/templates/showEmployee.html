@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Mobile no</td>
+        </tr>
+        {% for employee in emps%}
+        <tr>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.mobile }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
