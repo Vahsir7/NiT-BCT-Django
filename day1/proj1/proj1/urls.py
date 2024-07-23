@@ -25,5 +25,5 @@ urlpatterns = [
     path("myhome/", views.home),
     path("contact/", views.contact),
     path("registration/", views.registration),
-    path("regprocess/", views.regprocess),
+    path("regprocess/", views.funprocess),
 ]
