@@ -11,3 +11,9 @@ def contact(request):
 
 def registration(request):
     return render(request, "registration.html")
+
+def regprocess(request):
+    name = request.POST.get("name")
+    email = request.POST.get("email")
+    mobile = request.POST.get("mobile")
+    return render(request, "regprocess.html", {"name": name, "email": email, "mobile": mobile})
