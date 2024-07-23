@@ -1,0 +1,43 @@
+/* dark-mode.css */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group label {
+    color: #e0e0e0;
+}
+
+.form-control {
+    background-color: #333;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+.btn-primary {
+    background-color: #64b5f6;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #42a5f5;
+}
+
+.btn-primary:active {
+    background-color: #2196f3;
+    box-shadow: none;
+}
