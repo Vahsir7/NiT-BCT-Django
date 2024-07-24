@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <h1>Applicant details portal</h1>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>Full name</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Image</th>
+            <th>Update</th>
+        </tr>
+        {% for applicant in applicants %}
+        <tr>
+            <td>{{ applicant.name }}</td>
+            <td>{{ applicant.email }}</td>
+            <td>{{ applicant.mobile }}</td>
+            <td><img src="{% static 'upload/' %}{{applicant.uimage}}" alt="image of {{ applicant.uimage }}" width="100" height="100"></td>
+            <td><a href="/edit/{{applicant.id}} ">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

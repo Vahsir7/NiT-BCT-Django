@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome applicant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1><b>Welcome applicant</b></h1>
+        <hr>
+        <h3>Enter your details</h3>
+        <hr>
+        <form name="form", action="/applicantprocess", method = "POST", enctype="multipart/form-data" >
+        {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Enter Full name:</label>
+                <input type="text" class="form-control" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Enter email id:</label>
+                <input type="email" class="form-control" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Enter phone number:</label>
+                <input type="text" class="form-control" placeholder="Enter phone number" name="mobile">
+            </div>
+            <div class="form-group">
+                <label for="uimage">Enter address:</label>
+                <input type="file" class="form-control" placeholder="Upload image" name="uimage">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>         
+</body>
+</html>
