@@ -24,9 +24,10 @@ def applypost(request):
         aplno = aplno + 1
         return render(request, "getform.html")
     
-def editpost(request):
-    if request.method == "POST"
-    
+#def editpost(request):
+    #if request.method == "POST":
+
+
 
 def handle_uploaded_file(f):
     with open(img_path+str(aplno)+".jpg","wb+") as destination:

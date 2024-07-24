@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome applicant</title>
@@ -27,8 +28,19 @@
                 <label for="mobile">Enter phone number:</label>
                 <input type="text" class="form-control" value={{applicant.mobile}} name="mobile">
             </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{% static 'upload/' %}{{ applicant.uimage }}" alt="image" height="100" width="100">
+                </div>
+                <div class="col-md-10">
+                    <label for="uimage">Upload new image:</label>
+                    <input type="file" class="form-control" name="uimage">
+                </div>
+            </div>
+            <hr>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        
     </div>         
 </body>
 </html>

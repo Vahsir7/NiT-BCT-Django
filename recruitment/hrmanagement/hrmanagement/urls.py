@@ -25,5 +25,5 @@ urlpatterns = [
     path("applicantprocess", views.applypost),
     path("display/", views.display),
     path("edit/<int:idp>", views.edit),
-    path('editprocess',views.editpost)
+    #path('editprocess',views.editpost)
 ]
