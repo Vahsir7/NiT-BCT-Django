@@ -14,7 +14,7 @@
         <hr>
         <h3>Enter new details</h3>
         <hr>
-        <form name="form", action="/applicantprocess", method = "POST", enctype="multipart/form-data" >
+        <form name="form", action="/update/{{applicant.id}}", method = "POST", enctype="multipart/form-data" >
         {% csrf_token %}
             <div class="form-group">
                 <label for="name">Enter Full name:</label>

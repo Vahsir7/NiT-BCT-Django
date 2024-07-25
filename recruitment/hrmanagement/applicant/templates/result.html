@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    {% include 'search.html' %} 
+    <hr>
+    <h4><b>Search result</b></h4>
+    <hr>
+    <div>
+        <p>Name: {{applicants.name}}</p>
+        <p>Email: {{applicants.email}}</p>
+        <p>Phone number: {{applicants.mobile}}</p>
+        <img src="{% static 'upload/' %}{{applicants.uimage}}" alt="image of {{ applicants.uimage }}" width="100" height="100">
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Applicant Search</h1>
+        <hr>
+        <div class="search-box">
+            <form action="/result" method="POST">
+                {% csrf_token %}
+                <label for="email">Enter email id:</label>
+                <input type="email" placeholder="Enter email" name="email"><br>
+                <btn type="submit" class="btn btn-primary">Search</btn>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

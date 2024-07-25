@@ -21,9 +21,11 @@ from applicant import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("apply/", views.applyform),
+    path("", views.applyform),
     path("applicantprocess", views.applypost),
     path("display/", views.display),
     path("edit/<int:idp>", views.edit),
-    #path('editprocess',views.editpost)
+    path('update/<int:id>',views.update),
+    path('search/',views.search),
+    path('result',views.result)
 ]

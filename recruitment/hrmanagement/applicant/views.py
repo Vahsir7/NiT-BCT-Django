@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Applicants
-
+from .forms import ApplicantForm
 aplno = 0
 img_path = "applicant/static/upload/"
 
@@ -24,8 +24,16 @@ def applypost(request):
         aplno = aplno + 1
         return render(request, "getform.html")
     
-#def editpost(request):
-    #if request.method == "POST":
+def update(request,id):
+    obj = Applicants.objects.get(id=id)
+    obj.name=request.POST['name']
+    obj.email=request.POST['email']
+    obj.mobile=request.POST['mobile']
+    obj.uimage=request.FILES['uimage']
+    obj.save()
+    objs=Applicants.objects.all()
+    return render(request,"display.html",{"applicants":objs})
+    
 
 
 
@@ -39,4 +47,16 @@ def display(request):
     return render(request, "display.html", {"applicants": applicants})
 # Create your views here.
 
+def search(request):
+    return render(request, "search.html")
+
+def result(request):
     
+    if(request.method=="POST"):
+        email=request.POST['email']
+        try:
+            applicants=Applicants.objects.get(email=email)
+            return render(request, "result.html", {"applicants": applicants})
+        
+        except Applicants.DoesNotExist:
+            return render(request, "notFound.html")
